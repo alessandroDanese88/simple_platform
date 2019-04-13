@@ -1,0 +1,14 @@
+vunit vu1 (buslayer_master) {
+    default clock = (posedge wb_clk);
+
+    // if we start a new transaction, then either ack, or stall, is asserted
+    // (but not both).
+    PSL1: assert always ((wb_cyc && wb_stb && !wb_ack)
+                              -> next![1]((wb_ack && !wb_stall) || (!wb_ack && wb_stall)));
+
+    // ack is never asserted without a transaction
+    PSL2: assert never (wb_ack && !wb_cyc);
+
+    // if stall is asserted, then stall is high until ack is asserted
+    PSL3: assert always ({wb_cyc && wb_stb; wb_stall} |-> wb_stall until! wb_ack);
+}

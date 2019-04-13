@@ -1,0 +1,4 @@
+vunit vu2 (buslayer_slave) {
+    default clock = (posedge wb_clk);
+
+}

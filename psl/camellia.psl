@@ -1,0 +1,4 @@
+vunit vu3 (camellia) {
+    default clock = (posedge CLK);
+
+}

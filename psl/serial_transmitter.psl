@@ -1,0 +1,4 @@
+vunit vu4 (serial_transmitter) {
+    default clock = (posedge clk);
+
+}
