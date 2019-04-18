@@ -26,7 +26,7 @@ if [ ! -e $WORKDIR ]; then
 fi
 
 command -v vcd2mangrove.py >/dev/null 2>&1 || { echo >&2 "vcd2mangrove.py is required but it's not installed."; exit 1;}
-command -v assertionMiner >/dev/null 2>&1 || { echo >&2 "assertionMiner is required but it's not installed."; exit 1;}
+command -v a-team >/dev/null 2>&1 || { echo >&2 "a-team is required but it's not installed."; exit 1;}
 
 echo "Turning the VCD trace file into a mangrove trace file."
 
@@ -35,4 +35,4 @@ vcd2mangrove.py $TRACE_VCD $CLOCK True
 mv trace.mangrove $WORKDIR
 mv trace.variables $WORKDIR
 
-assertionMiner $CONF_MINER
+a-team $CONF_MINER

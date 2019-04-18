@@ -7,7 +7,7 @@
         </traces>
     </tracereader>
 
-    <staticanalyser name="manualAnalysis">
+    <coneminer name="manualDefinition">
         <directions>
             <direction name="wb_cyc"   dir="out" />
             <direction name="wb_stb"   dir="out" />
@@ -23,13 +23,13 @@
             <direction name="ready_from_bus" dir="out" />
             <direction name="error_from_bus" dir="out" />
         </directions>
-    </staticanalyser>
+    </coneMiner>
 
     <propositionminer name="booleanVariables"/>
 
     <propertyminer name="A-teamMiner">
         <templates>
-           <template value="G( p1 -> (p2) )" /> 
+           <template value="G( p1 -> (p2) )" />
         </templates>
         <constraints maxVariables="10"/>
     </propertyminer>

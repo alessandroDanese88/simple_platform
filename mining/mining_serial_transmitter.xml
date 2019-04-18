@@ -7,7 +7,7 @@
         </traces>
     </tracereader>
 
-    <staticanalyser name="manualAnalysis">
+    <coneminer name="manualDefinition">
         <directions>
             <direction name="rst"              dir="in" />
             <direction name="data_to_send[0]"  dir="out" />
@@ -21,7 +21,7 @@
             <direction name="send"             dir="in" />
             <direction name="val"              dir="out" />
         </directions>
-    </staticanalyser>
+    </coneMiner>
 
     <propositionminer name="booleanVariables"/>
 

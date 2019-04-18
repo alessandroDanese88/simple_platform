@@ -7,7 +7,7 @@
         </traces>
     </tracereader>
 
-    <staticanalyser name="manualAnalysis">
+    <coneminer name="manualDefinition">
         <directions>
             <direction name="rstn"  dir="in" />
             <direction name="en"    dir="in" />
@@ -17,7 +17,7 @@
             <direction name="kvld"  dir="out" />
             <direction name="dvld"  dir="out" />
         </directions>
-    </staticanalyser>
+    </coneMiner>
 
     <propositionminer name="booleanVariables"/>
 

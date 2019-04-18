@@ -7,7 +7,7 @@
         </traces>
     </tracereader>
 
-    <staticanalyser name="manualAnalysis">
+    <coneminer name="manualDefinition">
         <directions>
             <direction name="wb_cyc"   dir="in" />
             <direction name="wb_stb"   dir="in" />
@@ -22,7 +22,7 @@
             <direction name="err"      dir="in" />
             <direction name="done"     dir="in" />
         </directions>
-    </staticanalyser>
+    </coneMiner>
 
     <propositionminer name="booleanVariables"/>
 
